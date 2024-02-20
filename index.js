@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // const btn = document.getElementById('createBtn');
     const form = document.querySelector('form');
 
-    // btn.addEventListener('click', function() {
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         const formData = new FormData(form)
@@ -33,13 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         newDiv.appendChild(newH4);
         newDiv.appendChild(newP);
     
-        // Append the new div to the body
-        // const formDiv = document.querySelector('form');
-        // const parentDiv = formDiv.parentNode;
-        // parentDiv.appendChild(newDiv, formDiv);
-
-        // const blogDiv = document.getElementById("blogs");
-        // blogDiv.appendChild(newDiv);
         document.getElementById("blogs").insertBefore(newDiv, document.getElementById('blogs').firstChild);
     })
 });
